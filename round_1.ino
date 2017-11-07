@@ -77,7 +77,7 @@ void loop() {
 		detectwallfront_right();
 		can.speedwheel(5000, 0, 0);
 		//delay(200);
-		if (wallfront_right <= 31)
+		if (wallfront_right <= 31)//////////////////////到桥
 		{
 
 			can.initdriver(CAN_BPS_1000K, 0, 0, 4);
@@ -128,25 +128,25 @@ void loop() {
 		detectwallfront_right();
 		if (valueleft == 1)
 		{
-			can.speedwheel(4000, 0, 1);
-			can.speedwheel(4000, 0, 4);//��
-			can.speedwheel(4250, 0, 2);
-			can.speedwheel(4250, 0, 3);//��
+			can.speedwheel(3000, 0, 1);
+			can.speedwheel(3000, 0, 4);//��
+			can.speedwheel(3250, 0, 2);
+			can.speedwheel(3250, 0, 3);//��
 
 		}
 		if (valueright == 1)
 		{
-			can.speedwheel(4250, 0, 1);
-			can.speedwheel(4250, 0, 4);//��
-			can.speedwheel(2000, 0, 2);
-			can.speedwheel(2000, 0, 3);//��
+			can.speedwheel(3250, 0, 1);
+			can.speedwheel(3250, 0, 4);//��
+			can.speedwheel(3000, 0, 2);
+			can.speedwheel(3000, 0, 3);//��
 		}
 		if (valueright == 0 && valueleft == 0)
 		{
 			can.speedwheel(4000, 0, 0);
 
 		}
-		if (wallfront_right<16) {
+		if (wallfront_right<16) {////////////////////////////墙
 
 			start = start + 1;
 
@@ -198,7 +198,7 @@ void loop() {
 		detectwallfront_right();
 		can.speedwheel(2000, 0, 0);
 		//delay(200);
-		if (wallfront_right <= 16)
+		if (wallfront_right <= 16)///////////取物台
 		{
 
 			start = start + 1;
@@ -258,7 +258,7 @@ void loop() {
 		detectwallfront_right();
 		can.speedwheel(-1000, 0, 0);
 		//delay(200);
-		if (wallfront_right >= 21)
+		if (wallfront_right >= 21)///////////后退
 		{
 
 			start = start + 1;
@@ -302,18 +302,18 @@ void loop() {
 	if (start == 14)//走向置物台totable
 	{
 		detectwallfront_right();
-		if (wallfront_right > 150)
+		if (wallfront_right > 150)/////////////放
 		{
-			can.speedwheel(2050, 0, 1);
+			can.speedwheel(2100, 0, 1);
 			can.speedwheel(2100, 0, 2);
 			can.speedwheel(2100, 0, 3);
-			can.speedwheel(2050, 0, 4);
+			can.speedwheel(2100, 0, 4);
 		}
 
 
 
 		//delay(200);
-		if (wallfront_right <= 60)
+		if (wallfront_right <= 75)////////////停在置物台
 		{
 
 			can.initdriver(CAN_BPS_1000K, 0, 0, 4);
@@ -355,7 +355,7 @@ void loop() {
 		detectwallfront_right();
 		can.speedwheel(1000, 0, 0);
 		//delay(200);
-		if (wallfront_right <= 150)
+		if (wallfront_right <= 50)////////////////停在桌前
 		{
 
 			stopwheels();
@@ -379,7 +379,7 @@ void loop() {
 		digitalWrite(robotarmoutput, HIGH);
 		delay(1000);
 		digitalWrite(robotarmoutput, LOW);
-		delay(20000);
+		delay(2000);
 		/*robotfinish == digitalRead(robotarminput);
 		Serial.println("                          ");
 		Serial.print(robotfinish);
@@ -453,7 +453,7 @@ void loop() {
 		detectwallfront_right();
 		can.speedwheel(1000, 0, 0);
 		//delay(200);
-		if (wallfront_right <= 250)
+		if (wallfront_right <= 40)///////////终点墙
 		{
 
 			can.initdriver(CAN_BPS_1000K, 0, 0, 4);
@@ -489,7 +489,7 @@ void loop() {
 		detectwallfront_right();
 		can.speedwheel(1000, 0, 0);
 		//delay(200);
-		if (wallfront_right <= 150)
+		if (wallfront_right <= 20)///////////停在终点
 		{
 
 			stopwheels();
