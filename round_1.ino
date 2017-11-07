@@ -77,7 +77,7 @@ void loop() {
 		detectwallfront_right();
 		can.speedwheel(5000, 0, 0);
 		//delay(200);
-		if (wallfront_right <= 31)//////////////////////到桥
+		if (wallfront_right <= 50)//////////////////////到桥
 		{
 
 			can.initdriver(CAN_BPS_1000K, 0, 0, 4);
@@ -130,23 +130,23 @@ void loop() {
 		{
 			can.speedwheel(3000, 0, 1);
 			can.speedwheel(3000, 0, 4);//��
-			can.speedwheel(3250, 0, 2);
-			can.speedwheel(3250, 0, 3);//��
+			can.speedwheel(3550, 0, 2);
+			can.speedwheel(3550, 0, 3);//��
 
 		}
 		if (valueright == 1)
 		{
-			can.speedwheel(3250, 0, 1);
-			can.speedwheel(3250, 0, 4);//��
+			can.speedwheel(3550, 0, 1);
+			can.speedwheel(3550, 0, 4);//��
 			can.speedwheel(3000, 0, 2);
 			can.speedwheel(3000, 0, 3);//��
 		}
 		if (valueright == 0 && valueleft == 0)
 		{
-			can.speedwheel(4000, 0, 0);
+			can.speedwheel(3000, 0, 0);
 
 		}
-		if (wallfront_right<16) {////////////////////////////墙
+		if (wallfront_right<30) {////////////////////////////墙
 
 			start = start + 1;
 
@@ -165,10 +165,10 @@ void loop() {
 	{
 		if (turned == 1 && (wallleft < wallright))
 		{
-			can.positionwheel(3000, -203120, 0, 1);
-			can.positionwheel(3000, 203120, 0, 2);
-			can.positionwheel(3000, 203120, 0, 3);
-			can.positionwheel(3000, -203120, 0, 4);
+			can.positionwheel(3000, -211120, 0, 1);
+			can.positionwheel(3000, 211120, 0, 2);
+			can.positionwheel(3000, 211120, 0, 3);
+			can.positionwheel(3000, -211120, 0, 4);
 			turned++;
 			delay(4000);
 
@@ -258,7 +258,7 @@ void loop() {
 		detectwallfront_right();
 		can.speedwheel(-1000, 0, 0);
 		//delay(200);
-		if (wallfront_right >= 21)///////////后退
+		if (wallfront_right >= 55)///////////后退..
 		{
 
 			start = start + 1;
@@ -313,7 +313,7 @@ void loop() {
 
 
 		//delay(200);
-		if (wallfront_right <= 75)////////////停在置物台
+		if (wallfront_right <= 110)////////////停在置物台
 		{
 
 			can.initdriver(CAN_BPS_1000K, 0, 0, 4);
@@ -328,7 +328,7 @@ void loop() {
 		{
 
 			can.positionwheel(3000, 226120, 0, 1);
-			can.positionwheel(3000, -226120, 0, 2);
+			can.positionwheel(3000, -226120, 0, 2);//226120
 			can.positionwheel(3000, -226120, 0, 3);
 			can.positionwheel(3000, 226120, 0, 4);
 			turned++;
@@ -355,7 +355,7 @@ void loop() {
 		detectwallfront_right();
 		can.speedwheel(1000, 0, 0);
 		//delay(200);
-		if (wallfront_right <= 50)////////////////停在桌前
+		if (wallfront_right <= 20)////////////////停在桌前
 		{
 
 			stopwheels();
@@ -453,7 +453,7 @@ void loop() {
 		detectwallfront_right();
 		can.speedwheel(1000, 0, 0);
 		//delay(200);
-		if (wallfront_right <= 40)///////////终点墙
+		if (wallfront_right <= 25)///////////终点墙
 		{
 
 			can.initdriver(CAN_BPS_1000K, 0, 0, 4);
@@ -537,11 +537,11 @@ void turnleft() {
 	turned = turned + 1;
 	}*/
 	//221120
-	can.positionwheel(3000, -206120, 0, 1);
-	can.positionwheel(3000, 206120, 0, 2);
-	can.positionwheel(3000, 206120, 0, 3);
+	can.positionwheel(3000, -210120, 0, 1);
+	can.positionwheel(3000, 210120, 0, 2);
+	can.positionwheel(3000, 210120, 0, 3);
 
-	can.positionwheel(3000, -206120, 0, 4);
+	can.positionwheel(3000, -210120, 0, 4);
 
 	turned = turned + 1;
 
@@ -561,10 +561,10 @@ void turnright() {
 	can.speedwheel(1000, 0, 3);
 	can.speedwheel(-1000, 0, 4);*/
 
-	can.positionwheel(3000, 216120, 0, 1);
-	can.positionwheel(3000, -216120, 0, 2);
-	can.positionwheel(3000, -216120, 0, 3);
-	can.positionwheel(3000, 216120, 0, 4);
+	can.positionwheel(3000, 210120, 0, 1);//216120
+	can.positionwheel(3000, -210120, 0, 2);
+	can.positionwheel(3000, -210120, 0, 3);
+	can.positionwheel(3000, 210120, 0, 4);
 
 	turned = turned + 1;
 
