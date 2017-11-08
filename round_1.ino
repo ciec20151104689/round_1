@@ -77,7 +77,7 @@ void loop() {
 		detectwallfront_right();
 		can.speedwheel(5000, 0, 0);
 		//delay(200);
-		if (wallfront_right <= 50)//////////////////////到桥
+		if (wallfront_right <= 52)//////////////////////到桥
 		{
 
 			can.initdriver(CAN_BPS_1000K, 0, 0, 4);
@@ -95,20 +95,27 @@ void loop() {
 	{
 		if (turned == 0 && (wallleft < wallright))
 		{
-			turnleft();
-			delay(4000);
+			can.positionwheel(3000, -205120, 0, 1);
+			can.positionwheel(3000, 205120, 0, 2);
+			can.positionwheel(3000, 205120, 0, 3);
+			can.positionwheel(3000, -205120, 0, 4);
+			turned++;
 		}
 		if (turned == 0 && (wallleft > wallright))
 		{
-			turnright();
-			delay(4000);
+			can.positionwheel(3000, 205120, 0, 1);//216120
+			can.positionwheel(3000, -205120, 0, 2);
+			can.positionwheel(3000, -205120, 0, 3);
+			can.positionwheel(3000, 205120, 0, 4);
+			turned++;
 		}
 		if (turned == 1)
 		{
 			start = start + 1;
+			delay(4000);
+
 
 		}
-
 
 
 

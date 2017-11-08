@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "round_1", "round_1.vcxproj", "{9D256CD6-C135-4016-9B42-1C4BC8C89AFF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "route_block", "..\route_block\route_block.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Serial_Receive", "..\Serial_Receive\Serial_Receive.vcxproj", "{94EBFC12-C681-4467-B55E-38DC441CB16C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,6 +19,14 @@ Global
 		{9D256CD6-C135-4016-9B42-1C4BC8C89AFF}.Debug|x86.Build.0 = Debug|Win32
 		{9D256CD6-C135-4016-9B42-1C4BC8C89AFF}.Release|x86.ActiveCfg = Release|Win32
 		{9D256CD6-C135-4016-9B42-1C4BC8C89AFF}.Release|x86.Build.0 = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.ActiveCfg = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.Build.0 = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
+		{94EBFC12-C681-4467-B55E-38DC441CB16C}.Debug|x86.ActiveCfg = Debug|Win32
+		{94EBFC12-C681-4467-B55E-38DC441CB16C}.Debug|x86.Build.0 = Debug|Win32
+		{94EBFC12-C681-4467-B55E-38DC441CB16C}.Release|x86.ActiveCfg = Release|Win32
+		{94EBFC12-C681-4467-B55E-38DC441CB16C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
